@@ -1,5 +1,9 @@
 # ShopID: ItemID, BuyPrice, SellPrice, ProduceQuanity; ItemID, BuyPrice, SellPrice, ProduceQuanity;
 
+# print(dictionary.items()) #prints keys and values
+# print(dictionary.keys()) #prints keys
+# print(dictionary.values()) #prints values
+
 import re
 import csv
 
@@ -41,5 +45,7 @@ for key in item_attributes:
 shop_inventories[shop_match] = item_attributes
 
 # Write the end result to shop_mess.txt file
-with open('shop_mess.txt', 'w') as f:
-    f.write(str(shop_inventories))
+# with open('shop_mess.txt', 'w') as f:
+#     f.write(str(shop_inventories))
+
+print(shop_inventories)
