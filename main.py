@@ -22,9 +22,16 @@ with open('prices.dat', 'r') as f:
     text = f.read().splitlines()
 
 shop_inventories = {}
-shop_match = re.search(regex_shop, text[0])
+shop_match = re.search(regex_shop, text[0]).group(1)
+
 item_matches = re.findall(regex_items, text[0])
+item_matches_split = re.split(',', item_matches[0].replace(';', ''))
+
+
+# for _ in item_matches_split:
+
+
 shop_inventories[shop_match] = item_matches
 
 with open('shop_mess.txt', 'w') as f:
-    f.write(str(shop_inventories))
+    f.write(str(item_matches_split))
