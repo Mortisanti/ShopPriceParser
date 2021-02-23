@@ -37,9 +37,9 @@ for i in range(len(shops)):
             'ProduceQuanity': int(item[3])
         })
         indiv_item_dict.update({item_id: item_attributes_dict.copy()})
-        inventory_dict.update({'ItemID': indiv_item_dict.copy()})
+        inventory_dict.update({'Items': indiv_item_dict.copy()})
     shops_dict.update({shop_id: inventory_dict.copy()})
-main_dict['ShopID'] = shops_dict
+main_dict['Shops'] = shops_dict
 
 
 # with open('shops_dict.txt', 'w') as f:
